@@ -4,6 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix our: <http://www.airqualitypredictor.org/ontology#>.
+@prefix ourdata: <http://www.airqualitypredictor.org/data/>.
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
 
 
@@ -12,7 +13,7 @@
 		rml:source "air_quality-updated_short.csv";
 		rml:referenceFormulation ql:CSV];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{Measurement}";
+		rr:template "http://www.airqualitypredictor.org/data/{Measurement}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type; 
@@ -60,7 +61,7 @@
 		rml:source "air_quality-updated_short.csv";
 		rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{Measurement}";
+		rr:template "http://www.airqualitypredictor.org/data/{Measurement}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type; 
@@ -80,7 +81,7 @@
 		rml:source "meteorological_data-updated_short.csv";
 		rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{Measurement}";
+		rr:template "http://www.airqualitypredictor.org/data/{Measurement}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
@@ -97,7 +98,7 @@
 		rml:source "control-stations-info-updated-and-merged-with-links-and-ID.csv";
 		rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{CODIGO_CORTO}";
+		rr:template "http://www.airqualitypredictor.org/data/{CODIGO_CORTO}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdfs:label; 
@@ -122,7 +123,7 @@
 		rml:source "control-stations-info-updated-and-merged-with-links-and-ID.csv";
 		rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{CODIGO_CORTO}";
+		rr:template "http://www.airqualitypredictor.org/data/{CODIGO_CORTO}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
@@ -139,7 +140,7 @@
 		rml:source "control-stations-info-updated-and-merged-with-links-and-ID.csv";
 		rml:referenceFormulation ql:CSV  ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{LABEL}";
+		rr:template "http://www.airqualitypredictor.org/data/{LABEL}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type; 
