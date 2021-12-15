@@ -1,4 +1,4 @@
-@prefix : <http://www.airqualitypredictor.org/ontology#> .
+@prefix : <http://www.airqualitypredictor.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -142,9 +142,9 @@ dbr:City rdf:type owl:Class .
                     rdfs:subClassOf :Measurement .
 
 
-###  http://www.airqualitypredictor.org/ontology#CH4
-:CH4 rdf:type owl:Class ;
-     rdfs:subClassOf :Measurement .
+###  http://www.airqualitypredictor.org/ontology#CH_4
+:CH_4 rdf:type owl:Class ;
+      rdfs:subClassOf :Measurement .
 
 
 ###  http://www.airqualitypredictor.org/ontology#CO
@@ -192,9 +192,9 @@ dbr:City rdf:type owl:Class .
     rdfs:subClassOf :Measurement .
 
 
-###  http://www.airqualitypredictor.org/ontology#NO2
-:NO2 rdf:type owl:Class ;
-     rdfs:subClassOf :Measurement .
+###  http://www.airqualitypredictor.org/ontology#NO_2
+:NO_2 rdf:type owl:Class ;
+      rdfs:subClassOf :Measurement .
 
 
 ###  http://www.airqualitypredictor.org/ontology#NOx
@@ -202,13 +202,13 @@ dbr:City rdf:type owl:Class .
      rdfs:subClassOf :Measurement .
 
 
-###  http://www.airqualitypredictor.org/ontology#O3
-:O3 rdf:type owl:Class ;
-    rdfs:subClassOf :Measurement .
-
-
 ###  http://www.airqualitypredictor.org/ontology#OXY
 :OXY rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#O_3
+:O_3 rdf:type owl:Class ;
      rdfs:subClassOf :Measurement .
 
 
@@ -222,9 +222,9 @@ dbr:City rdf:type owl:Class .
       rdfs:subClassOf :Measurement .
 
 
-###  http://www.airqualitypredictor.org/ontology#PM25
-:PM25 rdf:type owl:Class ;
-      rdfs:subClassOf :Measurement .
+###  http://www.airqualitypredictor.org/ontology#PM2.5
+:PM2.5 rdf:type owl:Class ;
+       rdfs:subClassOf :Measurement .
 
 
 ###  http://www.airqualitypredictor.org/ontology#Rain
@@ -237,9 +237,9 @@ dbr:City rdf:type owl:Class .
                   rdfs:subClassOf :Measurement .
 
 
-###  http://www.airqualitypredictor.org/ontology#SO2
-:SO2 rdf:type owl:Class ;
-     rdfs:subClassOf :Measurement .
+###  http://www.airqualitypredictor.org/ontology#SO_2
+:SO_2 rdf:type owl:Class ;
+      rdfs:subClassOf :Measurement .
 
 
 ###  http://www.airqualitypredictor.org/ontology#SolarRadiation
