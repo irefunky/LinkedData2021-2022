@@ -9,8 +9,7 @@ from rdflib import Graph, Namespace, Literal
 from rdflib.namespace import RDF, RDFS
 
 
-github_storage = "C:/Users/Jorge/Desktop/Assignment4"
-github_storage_ = "https://raw.githubusercontent.com/AndreaCimminoArriaga/LinkedData2021-2022/main/Assignment4/"
+github_storage = "https://raw.githubusercontent.com/AndreaCimminoArriaga/LinkedData2021-2022/main/Assignment4/"
 
 
 g = Graph()

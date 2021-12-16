@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />   
+        <title> Proposed changes </title>
+    </head>
+    <body>
+        <h1>Proposed Changes</h1>
+        <p> These are changes that we thought would be necessary after analyzing the csv: </p>
+        <ol>
+            <li>YEAR
+                <ul>
+                    <li>Every entry has a year</li>
+                    <li>Consistent years (Ex: 200015 is not valid)</li>
+                    <li>Two digits (ex: go from 1 (January) to 01)</li>
+                </ul>
+                <b>NOTE:</b> maybe it is interesting to have an extra column with year and month like 2017-01 
+            </li>
+            <li>ID
+                <ul>
+                    <li>There are many buildings that share an id, and those that do not have an id for now we have put (blank), since it is not decided if it is a relevant column such as consumption or the year./li>
+                    <li>None of the IDs is repeated (If it is repeated check if it is correct in order to delete the row or modify it)</li>
+                </ul>
+            </li>
+            <li>TYPE OF BUILDING
+                <ul>
+                    <li>Every entry has a type of building</li>
+                    <li>If there are many types (ex: 800), we try to group them</li>
+                    <li>Maybe we should separate the class cultural center from library</li>
+                </ul>
+            </li>
+            <li>BUILDING
+                <ul>
+                    <li>Every entry has a building</li>
+                    <li>See if it is convenient to extract the name in a new column (Ex: LIBRARY - PHILIPPINE ISLANDS, perhaps it is more interesting to keep two columns. One with LIBRARY - PHILIPPINE ISLANDS and another with PHILIPPINE ISLANDS)</li>
+                </ul>
+            </li>
+            <li>ADDRESS
+                <ul>
+                    <li>Every entry has an adress (If they don't have it, look it up in google maps and fill in manually)</li>
+                    <li>Separate between type of road (street, roundabout, square, avenue), number, street name, etc.</li>
+                </ul>
+            </li>
+            <li>DISTRICT
+                <ul>
+                    <li>Every entry has a district</li>
+                    <li>Coherent districts (Ex: G is not valid)</li>
+                </ul>
+            </li>
+            <li>DISTRICT CODE
+                <ul>
+                    <li>Every entry has a district code (If they don't have it, look it up in google maps and fill in manually)</li>
+                    <li>Coherent numbers (Ex: 177319284 is not valid)</li>
+                    <li>Transform it into number</li>
+                </ul>
+            </li>
+            </li>
+            <li>NEIGHBORHOOD
+                <ul>
+                    <li>Every entry has a neighborhood (If they don't have it, look it up in google maps and fill in manually)</li>
+                    <li>Coherent neighborhoods (Ex: asddbka is not valid)</li>
+                </ul>
+            </li>
+            </li>
+            <li>NEIGHBORHOOD CODE
+                <ul>
+                    <li>Every entry has a neighborhood code (If they don't have it, look it up in google maps and fill in manually)</li>
+                    <li>Coherent numbers (Ex: 5258222 is not valid)</li>
+                    <li>Transform it into number</li>
+                </ul>
+            </li>
+            <li>COORDINATE X
+                <ul>
+                    <li>Every entry has a coordinate X (If they don't have it, look it up in google maps and fill in manually)</li>
+                    <li>Transform it into number or float</li>
+                </ul>
+            </li>
+            <li>COORDINATE Y
+                <ul>
+                    <li>Every entry has a coordinate Y (If they don't have it, look it up in google maps and fill in manually)</li>
+                    <li>Transform it into number or float</li>
+                </ul>
+            </li>
+            <li>LONGITUDE
+                <ul>
+                    <li>Every entry has a longitude (If they don't have it, look it up in google maps and fill in manually)</li>
+                    <li>Transform it into number or float</li>
+                    <li>Consistent range (anything outside -180 to +180 is not valid)</li>
+                </ul>
+            </li>
+            <li>LATITUDE
+                <ul>
+                    <li>Every entry has a latitude (If they don't have it, look it up in google maps and fill in manually)</li>
+                    <li>Transform it into number or float</li>
+                    <li>Consistent range (anything outside -180 to +180 is not valid)</li>
+                </ul>
+            </li>
+            <b>NOTE:</b> see if it is important to keep X and Y coordinates as well as longitude and latitude.
+            <li>SENSOR
+                <ul>
+                    <li>delete the column</li>
+                </ul>
+            </li>
+            <li>KIND
+                <ul>
+                    <li>Check if they are grouped. (Ex: external and classes with the prefix tele are possibly the same)</li>
+                </ul>
+            </li>
+            <li>CLASS
+                <ul>
+                    <li>Only 3 types (Reactive, active and gas)</li>
+                </ul>
+            </li>
+            <li>UNITS
+                <ul>
+                    <li>Only 3 types, since there are only three energies (Reactive, active and gas)</li>
+                </ul>
+            </li>
+            <li>CONSUMPTION
+                <ul>
+                    <li>Transform it into float</li>
+                </ul>
+            </li>
+        </ol>
+        <b>NOTE:</b> It must be taken into account that when changing the data, the ontology that we have created will also have to change. 
+    </body>
+</html>

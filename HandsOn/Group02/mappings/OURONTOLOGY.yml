@@ -1,0 +1,49 @@
+prefixes:
+  owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  xml: http://www.w3.org/XML/1998/namespace
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rr: http://www.w3.org/ns/r2rml#
+  rml: http://semweb.mmlab.be/ns/rml#
+  ql: http://semweb.mmlab.be/ns/ql#
+  vocab: http://www.semanticweb.org/raulr/ontologies/2021/10/untitled-ontology-2
+  
+mappings:
+
+  triplesmap1:
+    sources:
+      - [consumo_energia_edificios-updated.csv~csv]
+    s: https://datos.madrid.es/portal/site/egob/$(Area)
+
+  triplesmap2:
+    sources:
+      - [consumo_energia_edificios-updated.csv~csv]
+    s: $(Building)
+    po:
+      - [a, :Building]
+      - [:xCoordinate, $(COORDENADA-X), xsd:float]
+      - [:yCoordinate, $(COORDENADA-Y), xsd:float]
+      - [:hasId, $(ID),xsd:integer]
+      - [:description, $(EDIFICIO), xsd:string]
+      - [:isLocatedAt, $(TIPO DE VIA) $(NOMBRE DE LA VIA), xsd:string]
+      - [:isLocatedAt, $(NOMBRE DE LA VIA), xsd:string]
+      - [:isFromDistrict, $(DISTRITO), xsd:string]
+      - p: :Building
+
+    
+  triplesmap3:
+    sources:
+      - [consumo_energia_edificios-updated.csv~csv]
+    s: $(Energy_use)
+    po:
+      - [a, :Energy_use]
+      - [:Amount, $(CONSUMO), xsd:float]
+      - [:measuredWith, $(TIPO), xsd:string]
+      - [:classOfEnergy, $(CLASE), xsd:string]
+      - [:isFromYear, $(AÑO), xsd:integer]
+      - [:isFromMonth, $(MES), xsd:integer]
+      - [:hasMagnitude, $(UNIDADES), xsd:string]
+      - p: :hasEnergyUse
+        o: 
+          - mapping: TriplesMap2

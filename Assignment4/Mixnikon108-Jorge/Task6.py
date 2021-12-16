@@ -8,8 +8,7 @@ from rdflib import Graph, Namespace, Literal
 from rdflib.namespace import RDF, RDFS
 
 
-github_storage = "C:/Users/Jorge/Desktop/Assignment4"
-github_storage_ = "https://raw.githubusercontent.com/AndreaCimminoArriaga/LinkedData2021-2022/main/Assignment4/"
+github_storage = "https://raw.githubusercontent.com/AndreaCimminoArriaga/LinkedData2021-2022/main/Assignment4/"
 
 
 g = Graph()
@@ -25,7 +24,7 @@ ns = Namespace("http://somewhere#")
 g.add((ns.Researcher, RDF.type, RDFS.Class))
 for s, p, o in g:
   print(s,p,o)
-
+print("------")
 
 # **TASK 6.1: Create a new class named "University"**
 
@@ -34,7 +33,7 @@ ns = Namespace("http://somewhere#")
 g.add((ns.University, RDF.type, RDFS.Class))
 for s, p, o in g:
   print(s, p, o)
-
+print("------")
 
 # **TASK 6.2: Add "Researcher" as a subclass of "Person"**
 
@@ -42,7 +41,7 @@ for s, p, o in g:
 g.add((ns.Researcher, RDFS.subClassOf, ns.Person))
 for s, p, o in g.triples((None, RDFS.subClassOf, None)):
     print(s, p, o)
-
+print("------")
 
 # **TASK 6.3: Create a new individual of Researcher named "Jane Smith"**
 
@@ -50,7 +49,7 @@ for s, p, o in g.triples((None, RDFS.subClassOf, None)):
 g.add((ns.JaneSmith, ns.Researcher, Literal("Jane Smith")))
 for s, p, o in g.triples((None, ns.Researcher, None)):
     print(s, p, o)
-
+print("---6.3---")
 
 # **TASK 6.4: Add to the individual JaneSmith the fullName, given and family names**
 
@@ -61,11 +60,11 @@ g.add((ns.JaneSmith, vcard.Family, Literal('Smith')))
 for s, p, o in g.triples((ns.JaneSmith, None, None)):
     print(s, p, o)
 
-
+print("------")
 # **TASK 6.5: Add UPM as the university where John Smith works**
 
 g.add((ns.JohnSmith, vcard.workIn, ns.UPM))
 for s, p, o in g.triples((ns.JohnSmith, None, None)):
     print(s, p, o)
 
-
+print("------")

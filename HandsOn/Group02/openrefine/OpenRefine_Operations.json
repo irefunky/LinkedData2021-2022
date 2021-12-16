@@ -1,0 +1,1900 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "﻿AÑO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ﻿AÑO using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MES using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ID using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "01"
+      }
+    ],
+    "description": "Mass edit cells in column MES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "02"
+      }
+    ],
+    "description": "Mass edit cells in column MES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "9"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "09"
+      }
+    ],
+    "description": "Mass edit cells in column MES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "8"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "08"
+      }
+    ],
+    "description": "Mass edit cells in column MES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "7"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "07"
+      }
+    ],
+    "description": "Mass edit cells in column MES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "6"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "06"
+      }
+    ],
+    "description": "Mass edit cells in column MES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "5"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "05"
+      }
+    ],
+    "description": "Mass edit cells in column MES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "4"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "04"
+      }
+    ],
+    "description": "Mass edit cells in column MES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "3"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "03"
+      }
+    ],
+    "description": "Mass edit cells in column MES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "EDIFICIO",
+          "columnName": "EDIFICIO",
+          "query": "Biblioteca",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPOEDIFICIO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Centros culturales y bibliotecas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bibliotecas"
+      }
+    ],
+    "description": "Mass edit cells in column TIPOEDIFICIO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPOEDIFICIO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Centros culturales y bibliotecas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Centros culturales"
+      }
+    ],
+    "description": "Mass edit cells in column TIPOEDIFICIO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "DIRECCION",
+          "columnName": "DIRECCION",
+          "query": "CALLE",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DIRECCION",
+    "expression": "grel:if(value.contains('CALLE'), \"CALLE\", \"FALSE\")",
+    "onError": "set-to-blank",
+    "newColumnName": "TIPO DE VÍA",
+    "columnInsertIndex": 6,
+    "description": "Create column TIPO DE VÍA at index 6 based on column DIRECCION using expression grel:if(value.contains('CALLE'), \"CALLE\", \"FALSE\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "01"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO DISTRITO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "9"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "09"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO DISTRITO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "8"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "08"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO DISTRITO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "7"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "07"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO DISTRITO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "6"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "06"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO DISTRITO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "5"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "05"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO DISTRITO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "4"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "04"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO DISTRITO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "3"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "03"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO DISTRITO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "02"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO DISTRITO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CÓDIGO DISTRITO using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO BARRIO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CÓDIGO BARRIO using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "COORDENADA-X",
+          "columnName": "COORDENADA-X",
+          "query": ",",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA-X",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA-X using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA-X",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA-X using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA-Y",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA-Y using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA-Y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA-Y using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SENSOR",
+    "description": "Remove column SENSOR"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "telemedida"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Externo"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CLASE",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Energia Activa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Energia activa"
+      }
+    ],
+    "description": "Mass edit cells in column CLASE"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CLASE",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Energia Reactiva"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Energia reactiva"
+      }
+    ],
+    "description": "Mass edit cells in column CLASE"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "GRUPO",
+    "description": "Remove column GRUPO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "CLASE",
+          "expression": "value",
+          "columnName": "CLASE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Energia activa",
+                "l": "Energia activa"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIDADES",
+    "expression": "jython:value = \"kWh\"\nreturn value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column UNIDADES using expression jython:value = \"kWh\"\nreturn value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "CLASE",
+          "expression": "value",
+          "columnName": "CLASE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Energia reactiva",
+                "l": "Energia reactiva"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIDADES",
+    "expression": "jython:value = \"kVAr\"\nreturn value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column UNIDADES using expression jython:value = \"kVAr\"\nreturn value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "CLASE",
+          "expression": "value",
+          "columnName": "CLASE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Gas",
+                "l": "Gas"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIDADES",
+    "expression": "jython:value = \"m3/h\"\nreturn value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column UNIDADES using expression jython:value = \"m3/h\"\nreturn value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CONSUMO",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CONSUMO using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CONSUMO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CONSUMO using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "﻿AÑO",
+    "expression": "join ([coalesce(cells['﻿AÑO'].value,''),coalesce(cells['MES'].value,'')],'-')",
+    "onError": "keep-original",
+    "newColumnName": "FECHA",
+    "columnInsertIndex": 1,
+    "description": "Create column FECHA at index 1 based on column ﻿AÑO using expression join ([coalesce(cells['﻿AÑO'].value,''),coalesce(cells['MES'].value,'')],'-')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "FECHA",
+    "index": 2,
+    "description": "Move column FECHA to position 2"
+  },
+  {
+    "op": "core/multivalued-cell-split",
+    "columnName": "EDIFICIO",
+    "keyColumnName": "﻿AÑO",
+    "mode": "separator",
+    "separator": "+",
+    "regex": false,
+    "description": "Split multi-valued cells in column EDIFICIO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE DE LA CALLE",
+          "expression": "value",
+          "columnName": "NOMBRE DE LA CALLE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "BULEVAR INDALECIO PRIETO",
+                "l": "BULEVAR INDALECIO PRIETO"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "NOMBRE DE LA CALLE",
+          "columnName": "NOMBRE DE LA CALLE",
+          "query": "BUL",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO DE VÍA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "AVENIDA"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO DE VÍA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "EDIFICIO",
+          "expression": "value",
+          "columnName": "EDIFICIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " Bib. Vicálvaro",
+                "l": " Bib. Vicálvaro"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO DE VÍA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "CALLE"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO DE VÍA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "EDIFICIO",
+          "expression": "value",
+          "columnName": "EDIFICIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CDM Entrevías",
+                "l": "CDM Entrevías"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO DE VÍA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "CALLE"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO DE VÍA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPOEDIFICIO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Bibliotecas"
+      }
+    ],
+    "description": "Mass edit cells in column TIPOEDIFICIO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "EDIFICIO",
+          "expression": "value",
+          "columnName": "EDIFICIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Biblioteca Portazgo",
+                "l": "Biblioteca Portazgo"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO DE VÍA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "CALLE"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO DE VÍA"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO DE VÍA",
+          "expression": "value",
+          "columnName": "TIPO DE VÍA",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CALLE",
+                "l": "CALLE"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "EDIFICIO",
+          "expression": "value",
+          "columnName": "EDIFICIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Biblioteca Portazgo",
+                "l": "Biblioteca Portazgo"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "﻿AÑO",
+          "expression": "value",
+          "columnName": "﻿AÑO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "DIRECCION",
+          "columnName": "DIRECCION",
+          "query": "  ",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION",
+    "expression": "grel:value.replace(\"  \",\" \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DIRECCION using expression grel:value.replace(\"  \",\" \")"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column DIRECCION by separator"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "DIRECCION 2",
+          "columnName": "DIRECCION 2",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION 2",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": " ",
+    "regex": false,
+    "maxColumns": 3,
+    "description": "Split column DIRECCION 2 by separator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DIRECCION 2 1",
+    "description": "Remove column DIRECCION 2 1"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "DIRECCION 2",
+          "columnName": "DIRECCION 2",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION 2 3",
+    "expression": "grel:value.split(\"MADRID\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DIRECCION 2 3 using expression grel:value.split(\"MADRID\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "DIRECCION 2",
+          "columnName": "DIRECCION 2",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION 2 3",
+    "expression": "grel:value.replace(\"MADRID\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DIRECCION 2 3 using expression grel:value.replace(\"MADRID\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "DIRECCION 2",
+          "columnName": "DIRECCION 2",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION 2 3",
+    "expression": "grel:value[-6,-1]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DIRECCION 2 3 using expression grel:value[-6,-1]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "DIRECCION 2",
+          "columnName": "DIRECCION 2",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION 2 3",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DIRECCION 2 3 using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DIRECCION",
+    "description": "Remove column DIRECCION"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DIRECCION 1",
+    "newColumnName": "NOMBRE DE LA CALLE",
+    "description": "Rename column DIRECCION 1 to NOMBRE DE LA CALLE"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DIRECCION 2 2",
+    "newColumnName": "NÚMERO DEL EDIFICIO",
+    "description": "Rename column DIRECCION 2 2 to NÚMERO DEL EDIFICIO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DIRECCION 2 3",
+    "newColumnName": "CÓDIGO POSTAL",
+    "description": "Rename column DIRECCION 2 3 to CÓDIGO POSTAL"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "TIPO DE VÍA",
+    "index": 8,
+    "description": "Move column TIPO DE VÍA to position 8"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "TIPO DE VÍA",
+    "index": 7,
+    "description": "Move column TIPO DE VÍA to position 7"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "TIPO DE VÍA",
+    "index": 6,
+    "description": "Move column TIPO DE VÍA to position 6"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CONSUMO",
+          "columnName": "CONSUMO",
+          "query": "NO DATA",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MES using expression value.toString()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NOMBRE DE LA CALLE",
+          "columnName": "NOMBRE DE LA CALLE",
+          "query": "PLAZA",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO DE VÍA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PLAZA"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO DE VÍA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NOMBRE DE LA CALLE",
+          "columnName": "NOMBRE DE LA CALLE",
+          "query": "GLORIETA",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO DE VÍA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GLORIETA"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO DE VÍA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NOMBRE DE LA CALLE",
+          "columnName": "NOMBRE DE LA CALLE",
+          "query": "RONDA",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO DE VÍA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GLORIETA"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO DE VÍA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NOMBRE DE LA CALLE",
+          "columnName": "NOMBRE DE LA CALLE",
+          "query": "CARRETERA",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO DE VÍA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CARRETERA"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO DE VÍA"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE DE LA CALLE",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": " ",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column NOMBRE DE LA CALLE by separator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TIPO DE VÍA",
+    "description": "Remove column TIPO DE VÍA"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOMBRE DE LA CALLE 1",
+    "newColumnName": "TIPO DE VÍA",
+    "description": "Rename column NOMBRE DE LA CALLE 1 to TIPO DE VÍA"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOMBRE DE LA CALLE 2",
+    "newColumnName": "NOMBRE DE LA CALLE",
+    "description": "Rename column NOMBRE DE LA CALLE 2 to NOMBRE DE LA CALLE"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO DE VÍA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA"
+      }
+    ],
+    "description": "Mass edit cells in column TIPO DE VÍA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LATITUD",
+    "description": "Remove column LATITUD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LONGITUD",
+    "description": "Remove column LONGITUD"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO POSTAL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "8028 "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "28028"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO POSTAL"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO POSTAL",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CÓDIGO POSTAL using expression value.toString()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO POSTAL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "8028.0"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "28028"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO POSTAL"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO POSTAL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "8035.0"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "28035"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO POSTAL"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO POSTAL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "8045.0"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "28045"
+      }
+    ],
+    "description": "Mass edit cells in column CÓDIGO POSTAL"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO POSTAL",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CÓDIGO POSTAL using expression value.toNumber()"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "description": "Fill down cells in column ID"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "EDIFICIO",
+          "columnName": "EDIFICIO",
+          "query": "Bib.",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPOEDIFICIO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Centros culturales"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Centros culturales y bibliotecas"
+      }
+    ],
+    "description": "Mass edit cells in column TIPOEDIFICIO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NÚMERO DEL EDIFICIO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "39B,"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "39"
+      }
+    ],
+    "description": "Mass edit cells in column NÚMERO DEL EDIFICIO"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NÚMERO DEL EDIFICIO",
+          "columnName": "NÚMERO DEL EDIFICIO",
+          "query": "-",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NÚMERO DEL EDIFICIO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NÚMERO DEL EDIFICIO using expression value.toNumber()"
+  }
+
+
+
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NÚMERO DEL EDIFICIO",
+          "columnName": "NÚMERO DEL EDIFICIO",
+          "query": "-",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NÚMERO DEL EDIFICIO",
+    "expression": "jython:value = value[:2]\nreturn value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NÚMERO DEL EDIFICIO using expression jython:value = value[:2]\nreturn value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ID using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "﻿AÑO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ﻿AÑO using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MES using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NÚMERO DEL EDIFICIO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NÚMERO DEL EDIFICIO using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO POSTAL",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CÓDIGO POSTAL using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO DISTRITO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CÓDIGO DISTRITO using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CÓDIGO BARRIO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CÓDIGO BARRIO using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA-X",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA-X using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA-Y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA-Y using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CONSUMO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CONSUMO using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "﻿AÑO",
+    "newColumnName": "YEAR",
+    "description": "Rename column ﻿AÑO to YEAR"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MES",
+    "newColumnName": "MONTH",
+    "description": "Rename column MES to MONTH"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "YEAR",
+    "newColumnName": "ANIO",
+    "description": "Rename column YEAR to ANIO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MONTH",
+    "newColumnName": "MES",
+    "description": "Rename column MONTH to MES"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPO DE VÍA",
+    "newColumnName": "TIPO_DE_VIA",
+    "description": "Rename column TIPO DE VÍA to TIPO_DE_VIA"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPOEDIFICIO",
+    "newColumnName": "TIPO_EDIFICIO",
+    "description": "Rename column TIPOEDIFICIO to TIPO_EDIFICIO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOMBRE DE LA CALLE",
+    "newColumnName": "NOMBRE_DE_LA_CALLE",
+    "description": "Rename column NOMBRE DE LA CALLE to NOMBRE_DE_LA_CALLE"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NÚMERO DEL EDIFICIO",
+    "newColumnName": "NUMERO_DEL_EDIFICIO",
+    "description": "Rename column NÚMERO DEL EDIFICIO to NUMERO_DEL_EDIFICIO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CÓDIGO POSTAL",
+    "newColumnName": "CODIGO_POSTAL",
+    "description": "Rename column CÓDIGO POSTAL to CODIGO_POSTAL"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CÓDIGO DISTRITO",
+    "newColumnName": "CODIGO_DISTRITO",
+    "description": "Rename column CÓDIGO DISTRITO to CODIGO_DISTRITO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CÓDIGO BARRIO",
+    "newColumnName": "CODIGO_BARRIO",
+    "description": "Rename column CÓDIGO BARRIO to CODIGO_BARRIO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COORDENADA-X",
+    "newColumnName": "COORDENADA_X",
+    "description": "Rename column COORDENADA-X to COORDENADA_X"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COORDENADA-Y",
+    "newColumnName": "COORDENADA_Y",
+    "description": "Rename column COORDENADA-Y to COORDENADA_Y"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CONSUMO",
+          "columnName": "CONSUMO",
+          "query": "-",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "CONSUMO",
+    "expression": "grel:0",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CONSUMO using expression grel:0"
+  }
+  
+]

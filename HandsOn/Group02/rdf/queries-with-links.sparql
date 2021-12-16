@@ -1,0 +1,30 @@
+##############################################################
+# QUERIES
+##############################################################
+
+
+# PREFIJOS
+
+@prefix our:   <http://www.consumo_madrid.com/ontology#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+
+# 1 Devuelve los IRIs de los edificios y sus respectivos distritos. 
+
+	SELECT DISTINCT ?z ?x 
+	WHERE {?z a our:Building; our:isFromDistrict ?t. ?t owl:sameAs ?x } 
+
+# 2 Devuelve los Data Properties y Object Properties de la clase Building.
+
+	SELECT DISTINCT ?x 
+	WHERE {?y a our:Building; ?x ?z.} 
+
+# 3 Cuenta el número de edificios.
+
+	SELECT (COUNT(DISTINCT ?x) AS ?count) 
+	WHERE	{?x a our:Building }
+	
+# 4 Obtiene todas las clases.
+	
+	SELECT DISTINCT ?Class 
+	WHERE	{?x a ?Class}

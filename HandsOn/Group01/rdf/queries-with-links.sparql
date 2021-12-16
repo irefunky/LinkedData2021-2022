@@ -1,0 +1,60 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX saref4city: <https://saref.etsi.org/saref4city/>
+
+
+# Devuelve las ciudades que está linked con wikidata.
+
+SELECT ?city
+WHERE { 
+  ?city a saref4city:City.
+}
+
+
+# Devuelve todos los distritos que están linked con wikidata.
+
+SELECT distinct ?district
+            WHERE { 
+                ?district rdf:type saref4city:District.
+                ?district owl:sameAs ?a.
+            }
+
+
+# Devuelve los barrios que están linked con wikidata.
+
+SELECT ?neighbourhood
+            WHERE { 
+                ?neighbourhood rdf:type saref4city:Neighbourhood.
+                ?neighbourhood owl:sameAs ?a.
+            }
+
+
+# Nos saca el distrito que tiene código Q1763376 en wikidata.
+
+SELECT ?district 
+            WHERE { 
+                ?district rdf:type saref4city:District.
+                ?district owl:sameAs <http://www.wikidata.org/entity/Q1763376>.
+            }
+
+
+# Nos compara la cantidad de distritos totales con la cantidad de distritos linked, y veremos que es el mismo.
+
+SELECT * WHERE{
+    {
+    SELECT (count(distinct ?district_total) as ?count )
+    	WHERE { 
+                
+    		?district_total rdf:type saref4city:District.
+            }
+    }
+	UNION
+    {
+    SELECT (count(distinct ?district) as ?count )
+        WHERE { 
+                ?district rdf:type saref4city:District.
+    			?district owl:sameAs ?a.
+    			
+            }
+    }
+}  

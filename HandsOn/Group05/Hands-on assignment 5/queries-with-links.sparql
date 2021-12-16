@@ -1,0 +1,50 @@
+#1- Devuelve las IRIs de todos los distritos con los edificios que estan en dichos distritos.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX epower: <http://www.semanticweb.org/alumno/ontologies/2021/10/Group05_ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX frappe: <http://streamreasoning.org/ontologies/frappe#>
+
+SELECT ?linkedDistrict ?building
+  WHERE { ?district a dbp:District.
+          ?district owl:sameAs ?linkedDistrict.
+          ?building a epower:Building.
+          ?building frappe:isIn ?s.
+          ?s frappe:isIn ?district.
+        }
+
+#2- Devuelve el numero de los distritos que estan linkeados con el total, para sacer el porcentaje
+#la query sería análoga para las ciudades que están linked.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX epower: <http://www.semanticweb.org/alumno/ontologies/2021/10/Group05_ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT
+  WHERE {
+          { SELECT COUNT DISTINCT  ?total_d
+              WHERE { ?total_d a dbp:District.}
+          }
+          UNION
+          { SELECT COUNT DISTINCT  ?linked_d
+              WHERE { ?linked_d a dbp:District.
+                        ?linked_d owl:sameAs ?links. ?
+                    }
+          }
+        }
+
+#3- Devuelve los edificios y las potencias asociadas.
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX epower: <http://www.semanticweb.org/alumno/ontologies/2021/10/Group05_ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX frappe: <http://streamreasoning.org/ontologies/frappe#>
+
+SELECT ?building ?power
+  WHERE { ?building a epower:Building.
+          ?building epower:power ?power.
+        }

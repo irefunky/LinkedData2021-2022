@@ -1,0 +1,473 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "DIRECCION AUXILIAR",
+    "description": "Remove column DIRECCION AUXILIAR"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "HORARIO",
+    "description": "Remove column HORARIO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "UTMX",
+    "description": "Remove column UTMX"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "UTMY",
+    "description": "Remove column UTMY"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COD_BARRIO",
+    "description": "Remove column COD_BARRIO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COD_VIAL",
+    "description": "Remove column COD_VIAL"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "IDENTIFICADOR_MINT",
+    "description": "Remove column IDENTIFICADOR_MINT"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COD_ELEMENTO",
+    "description": "Remove column COD_ELEMENTO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LATITUD using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LONGITUD using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COD_NDP",
+    "newColumnName": "Cantidad",
+    "description": "Rename column COD_NDP to Cantidad"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "NÚMERO",
+          "expression": "value",
+          "columnName": "NÚMERO",
+          "from": 0,
+          "to": 620,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Cantidad",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cantidad using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "NÚMERO",
+          "expression": "value",
+          "columnName": "NÚMERO",
+          "from": 0,
+          "to": 620,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Cantidad",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": 1
+      }
+    ],
+    "description": "Mass edit cells in column Cantidad"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "NÚMERO",
+          "expression": "value",
+          "columnName": "NÚMERO",
+          "from": 0,
+          "to": 620,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "range",
+          "name": "Cantidad",
+          "expression": "value",
+          "columnName": "Cantidad",
+          "from": 1,
+          "to": 2,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Cantidad",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": 1
+      }
+    ],
+    "description": "Mass edit cells in column Cantidad"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CENTRO",
+    "description": "Remove column CENTRO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "NÚMERO",
+          "expression": "value",
+          "columnName": "NÚMERO",
+          "from": 0,
+          "to": 620,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NÚMERO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NÚMERO using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "NÚMERO",
+          "expression": "value",
+          "columnName": "NÚMERO",
+          "from": 0,
+          "to": 620,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NÚMERO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "s/n"
+      }
+    ],
+    "description": "Mass edit cells in column NÚMERO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "NÚMERO",
+          "expression": "value",
+          "columnName": "NÚMERO",
+          "from": 0,
+          "to": 620,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NÚMERO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "73/75"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "s/n"
+      }
+    ],
+    "description": "Mass edit cells in column NÚMERO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "PARTICULAS_VIAL",
+    "expression": "join ([coalesce(cells['PARTICULAS_VIAL'].value,''),coalesce(cells['NOMBRE_VIAL'].value,'')],' ')",
+    "onError": "keep-original",
+    "newColumnName": "Nombre",
+    "columnInsertIndex": 5,
+    "description": "Create column Nombre at index 5 based on column PARTICULAS_VIAL using expression join ([coalesce(cells['PARTICULAS_VIAL'].value,''),coalesce(cells['NOMBRE_VIAL'].value,'')],' ')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "TIPO_DATO",
+      "Cantidad",
+      "DIRECCION_COMPLETA",
+      "CLASE_VIAL",
+      "Nombre",
+      "TIPO_NÚMERO",
+      "NÚMERO",
+      "cod",
+      "DISTRITO",
+      "LATITUD",
+      "LONGITUD",
+      "OBSERVACIONES"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TIPO_NÚMERO",
+    "description": "Remove column TIPO_NÚMERO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod",
+    "description": "Remove column cod"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "OBSERVACIONES",
+    "description": "Remove column OBSERVACIONES"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "DIRECCION_COMPLETA",
+          "columnName": "DIRECCION_COMPLETA",
+          "query": "calle",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        },
+        {
+          "type": "list",
+          "name": "CLASE_VIAL",
+          "expression": "value",
+          "columnName": "CLASE_VIAL",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "calle",
+                "l": "calle"
+              }
+            },
+            {
+              "v": {
+                "v": "Calle",
+                "l": "Calle"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "CLASE_VIAL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Calle",
+          "calle"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Calle"
+      }
+    ],
+    "description": "Mass edit cells in column CLASE_VIAL"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "DIRECCION_COMPLETA",
+          "columnName": "DIRECCION_COMPLETA",
+          "query": "calle",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION_COMPLETA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "calle  Embajadores, 294 frente"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Calle  Embajadores, 294 frente"
+      }
+    ],
+    "description": "Mass edit cells in column DIRECCION_COMPLETA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CLASE_VIAL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Calle",
+          "Calle "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Calle"
+      }
+    ],
+    "description": "Mass edit cells in column CLASE_VIAL"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CLASE_VIAL",
+    "expression": "join ([coalesce(cells['CLASE_VIAL'].value,''),coalesce(cells['Nombre'].value,'')],' ')",
+    "onError": "keep-original",
+    "newColumnName": "NOMBRE",
+    "columnInsertIndex": 4,
+    "description": "Create column NOMBRE at index 4 based on column CLASE_VIAL using expression join ([coalesce(cells['CLASE_VIAL'].value,''),coalesce(cells['Nombre'].value,'')],' ')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "TIPO_DATO",
+      "Cantidad",
+      "DIRECCION_COMPLETA",
+      "NOMBRE",
+      "NÚMERO",
+      "DISTRITO",
+      "LATITUD",
+      "LONGITUD"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Cantidad",
+    "newColumnName": "CANTIDAD",
+    "description": "Rename column Cantidad to CANTIDAD"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPO_DATO",
+    "newColumnName": "TIPO CONTENEDOR",
+    "description": "Rename column TIPO_DATO to TIPO CONTENEDOR"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DIRECCION_COMPLETA",
+    "newColumnName": "DIRECCION COMPLETA",
+    "description": "Rename column DIRECCION_COMPLETA to DIRECCION COMPLETA"
+  }
+]

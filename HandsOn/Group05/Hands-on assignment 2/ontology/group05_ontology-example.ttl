@@ -1,12 +1,26 @@
-@prefix : <http://www.semanticweb.org/alumno/ontologies/2021/10/Group05_ontology>.
+@prefix epower: <http://www.semanticweb.org/alumno/ontologies/2021/10/Group05_ontology>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/1999/02/22-rdfs-syntax-ns#>.
 @prefix	xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix frappe: <http://streamreasoning.org/ontologies/frappe#>.
+@prefix arp: <http://www.arpenteur.org/ontology/Arpenteur.owl#>.
+@prefix dbp: <http://dbpedia.org/ontology/>.
 
-:ExampleBuilding a  :Building;
-                 :hasName       "Biblioteca Ángel Gonzalez"^^xsd:string;
-                 :locatedInArea "Latina"^^xsd:string;
-                 :locatedInArea :ExampleStreet.
+epower:ExampleBuilding a epower:Cultural;
+                 vcard:hasName "Biblioteca Ángel Gonzalez"^^xsd:string;
+                 epower:power "20"^^xsd:int;
+                 frappe:isIn :ExampleStreet.
+epower:Cultural rdfs:subClassOf epower:Building.
 
-:ExampleStreet   :locatedInArea "Latina"^^xsd:string;
-                 :hasName       "Granja de Torrehermosa"^^xsd:string;
-                 :portalNumber "2"^^xsd:int.
+epower:ExampleStreet a dbp:Street;   
+                 frappe:isIn :ExampleDistrict; 
+                 vcard:hasName "C/ Granja de Torrehermosa"^^xsd:string;
+                 epower:portalNumber "2"^^xsd:int.
+
+epower:ExampleDistrict a dbp:District;
+                 vcard:hasName "Latina"^^xsd:string;
+                 arp:hasCA "2178"^^xsd:int;
+                 frappe:isIn epower:ExampleCity.
+epower:ExampleCity a epower:City 
+                 vcard:hasName "Madrid"^^xsd:string.
