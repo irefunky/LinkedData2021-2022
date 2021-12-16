@@ -15,7 +15,7 @@ SELECT ?temp ?fecha
                 ?temp a aqp:Temperature .
                 ?year a aqp:atYear .
                 ?fecha a aqp:atDate .
-                FILTER(?year == 2020) .
+                FILTER(?year = 2020) .
             }
 
 
