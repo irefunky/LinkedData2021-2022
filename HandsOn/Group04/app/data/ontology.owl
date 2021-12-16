@@ -1,4 +1,4 @@
-@prefix : <http://www.airqualitypredictor.org/ontology/> .
+@prefix : <http://www.airqualitypredictor.org/ontology#> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,6 +8,14 @@
 @base <http://www.airqualitypredictor.org/ontology#> .
 
 <http://www.airqualitypredictor.org/ontology#> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
 
 #################################################################
 #    Object Properties
@@ -52,7 +60,7 @@ owl:sameAs rdf:type owl:ObjectProperty ;
 ###  http://www.airqualitypredictor.org/ontology#atDate
 :atDate rdf:type owl:DatatypeProperty ;
         rdfs:domain :Measurement ;
-        rdfs:range xsd:dateTime .
+        rdfs:range xsd:date .
 
 
 ###  http://www.airqualitypredictor.org/ontology#atDay
