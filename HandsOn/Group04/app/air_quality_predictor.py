@@ -1,7 +1,7 @@
 from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.spatial import Voronoi, voronoi_plot_2d
+from scipy.spatial import Voronoi
 from rdflib import Graph, Namespace
 from rdflib.namespace import XSD
 from rdflib.plugins.sparql import prepareQuery
