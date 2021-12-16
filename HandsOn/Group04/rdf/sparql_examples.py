@@ -86,7 +86,9 @@ def main():
                                     "xsd": XSD})
     result = g.query(q)
     print("\nQuery 3:")
-    print(get_no2_pm10_o3(control_station, date, g))
+    print("Max values of PM10, NO2 and O3 concentrations in the same day of the year")
+    for row in result:
+        print(row)
 
     # Query 4: see all properties of a measurement
     query = """
@@ -101,59 +103,6 @@ def main():
     print("\nQuery 4:")
     for row in result:
         print(row)
-
-
-def get_no2_pm10_o3(control_station, date, g) -> Tuple[float or None, float or None, float or None]:
-
-    # Namespaces
-    AQP_DATA = Namespace("http://www.airqualitypredictor.org/data/")
-    AQP_CLASSES = Namespace("http://www.airqualitypredictor.org/ontology/")
-    AQP_PROPERTIES = Namespace("http://www.airqualitypredictor.org/ontology#")
-
-    query = f"""
-            SELECT ?max_PM10 ?max_NO_2 ?max_O_3
-            WHERE {"{"}
-            {"{"}
-                {"{"}
-                    ?sub1 a aqp_classes:PM10 .
-                    ?sub1 aqp_properties:hasMaxValue ?max_PM10 .
-                    ?sub1 aqp_properties:isFrom aqp_data:{control_station} .
-                    ?sub1 aqp_properties:atDate ?date1 .
-                    FILTER (?date1 = "{date}"^^xsd:date) .
-                {"}"}
-                UNION
-                {"{"}
-                    ?sub2 a aqp_classes:NO2 .
-                    ?sub2 aqp_properties:hasMaxValue ?max_N0_2 .
-                    ?sub2 aqp_properties:isFrom aqp_data:{control_station} .
-                    ?sub2 aqp_properties:atDate ?date2 .
-                    FILTER(?date2 = "{date}"^^xsd:date) .
-                {"}"}
-            {"}"}
-            UNION 
-            {"{"}
-                ?sub3 a aqp_classes:O_3 .
-                ?sub3 aqp_properties:hasMaxValue ?max_O_3 .
-                ?sub3 aqp_properties:isFrom aqp_data:{control_station} .
-                ?sub3 aqp_properties:atDate ?date3 .
-                FILTER(?date3 = "{date}"^^xsd:date) .
-            {"}"}
-        {"}"}
-            """
-
-    q = prepareQuery(query, initNs={"aqp_data": AQP_DATA,
-                                    "aqp_classes": AQP_CLASSES,
-                                    "aqp_properties": AQP_PROPERTIES,
-                                    "xsd": XSD})
-
-    for no2, pm10, o3 in g.query(q):
-        no2 = no2.toPython() if no2 is not None else None
-        pm10 = pm10.toPython() if pm10 is not None else None
-        o3 = o3.toPython() if o3 is not None else None
-
-        return no2, pm10, o3
-
-    return None, None, None
 
 
 if __name__ == "__main__":
