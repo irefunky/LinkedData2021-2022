@@ -1,0 +1,295 @@
+@prefix : <http://www.airqualitypredictor.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.airqualitypredictor.org/ontology#> .
+
+<http://www.airqualitypredictor.org/ontology#> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.airqualitypredictor.org/ontology#hasControlStation
+:hasControlStation rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :isIn ;
+                   rdfs:domain :City ;
+                   rdfs:range :ControlStation .
+
+
+###  http://www.airqualitypredictor.org/ontology#hasMeasurement
+:hasMeasurement rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isFrom ;
+                rdfs:domain :ControlStation ;
+                rdfs:range :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#isFrom
+:isFrom rdf:type owl:ObjectProperty ;
+        rdfs:domain :Measurement ;
+        rdfs:range :ControlStation .
+
+
+###  http://www.airqualitypredictor.org/ontology#isIn
+:isIn rdf:type owl:ObjectProperty ;
+      rdfs:domain :ControlStation ;
+      rdfs:range :City .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:ObjectProperty ;
+           rdfs:domain :City ;
+           rdfs:range dbr:City .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.airqualitypredictor.org/ontology#atDate
+:atDate rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Measurement ;
+        rdfs:range xsd:dateTime .
+
+
+###  http://www.airqualitypredictor.org/ontology#atDay
+:atDay rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Measurement ;
+       rdfs:range [ rdf:type rdfs:Datatype ;
+                    owl:onDatatype xsd:int ;
+                    owl:withRestrictions ( [ xsd:minInclusive "1"^^xsd:int
+                                           ]
+                                           [ xsd:maxInclusive "31"^^xsd:int
+                                           ]
+                                         )
+                  ] .
+
+
+###  http://www.airqualitypredictor.org/ontology#atMonth
+:atMonth rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Measurement ;
+         rdfs:range [ rdf:type rdfs:Datatype ;
+                      owl:onDatatype xsd:int ;
+                      owl:withRestrictions ( [ xsd:minInclusive "1"^^xsd:int
+                                             ]
+                                             [ xsd:maxInclusive "12"^^xsd:int
+                                             ]
+                                           )
+                    ] .
+
+
+###  http://www.airqualitypredictor.org/ontology#atYear
+:atYear rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Measurement ;
+        rdfs:range xsd:nonNegativeInteger .
+
+
+###  http://www.airqualitypredictor.org/ontology#hasAdress
+:hasAdress rdf:type owl:DatatypeProperty ;
+           rdfs:domain :ControlStation ;
+           rdfs:range xsd:string .
+
+
+###  http://www.airqualitypredictor.org/ontology#hasMaxValue
+:hasMaxValue rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Measurement ;
+             rdfs:range xsd:float .
+
+
+###  http://www.airqualitypredictor.org/ontology#hasMeanValue
+:hasMeanValue rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Measurement ;
+              rdfs:range xsd:float .
+
+
+###  http://www.airqualitypredictor.org/ontology#hasMinValue
+:hasMinValue rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Measurement ;
+             rdfs:range xsd:float .
+
+
+###  http://www.airqualitypredictor.org/ontology#hasUnit
+:hasUnit rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Measurement ;
+         rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:DatatypeProperty ;
+           rdfs:domain :ControlStation ,
+                       :Measurement ;
+           rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/resource/City
+dbr:City rdf:type owl:Class .
+
+
+###  http://www.airqualitypredictor.org/ontology#BEN
+:BEN rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#BarometricPressure
+:BarometricPressure rdf:type owl:Class ;
+                    rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#CH_4
+:CH_4 rdf:type owl:Class ;
+      rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#CO
+:CO rdf:type owl:Class ;
+    rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#City
+:City rdf:type owl:Class ;
+      rdfs:comment "The city where the Control Station is located"@en .
+
+
+###  http://www.airqualitypredictor.org/ontology#ControlStation
+:ControlStation rdf:type owl:Class ;
+                rdfs:comment "The Control Station"@en .
+
+
+###  http://www.airqualitypredictor.org/ontology#EBE
+:EBE rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#MXY
+:MXY rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#Measurement
+:Measurement rdf:type owl:Class ;
+             rdfs:comment "It can be either about metheorogical data or about the air quality"@en .
+
+
+###  http://www.airqualitypredictor.org/ontology#Meteorological
+:Meteorological rdf:type owl:Class ;
+                rdfs:subClassOf :ControlStation .
+
+
+###  http://www.airqualitypredictor.org/ontology#NMHC
+:NMHC rdf:type owl:Class ;
+      rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#NO
+:NO rdf:type owl:Class ;
+    rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#NO_2
+:NO_2 rdf:type owl:Class ;
+      rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#NOx
+:NOx rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#OXY
+:OXY rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#O_3
+:O_3 rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#PHY
+:PHY rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#PM10
+:PM10 rdf:type owl:Class ;
+      rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#PM2.5
+:PM2.5 rdf:type owl:Class ;
+       rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#Rain
+:Rain rdf:type owl:Class ;
+      rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#RelativeHumidity
+:RelativeHumidity rdf:type owl:Class ;
+                  rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#SO_2
+:SO_2 rdf:type owl:Class ;
+      rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#SolarRadiation
+:SolarRadiation rdf:type owl:Class ;
+                rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#Suburban
+:Suburban rdf:type owl:Class ;
+          rdfs:subClassOf :ControlStation .
+
+
+###  http://www.airqualitypredictor.org/ontology#TCH
+:TCH rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#TOL
+:TOL rdf:type owl:Class ;
+     rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#Temperature
+:Temperature rdf:type owl:Class ;
+             rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#UV
+:UV rdf:type owl:Class ;
+    rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#UrbanBackground
+:UrbanBackground rdf:type owl:Class ;
+                 rdfs:subClassOf :ControlStation .
+
+
+###  http://www.airqualitypredictor.org/ontology#UrbanTraffic
+:UrbanTraffic rdf:type owl:Class ;
+              rdfs:subClassOf :ControlStation .
+
+
+###  http://www.airqualitypredictor.org/ontology#WindDirection
+:WindDirection rdf:type owl:Class ;
+               rdfs:subClassOf :Measurement .
+
+
+###  http://www.airqualitypredictor.org/ontology#WindSpeed
+:WindSpeed rdf:type owl:Class ;
+           rdfs:subClassOf :Measurement .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
