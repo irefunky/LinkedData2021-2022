@@ -1,15 +1,7 @@
-from tqdm import tqdm
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.spatial import Voronoi
-from rdflib import Graph, Namespace
-from rdflib.namespace import XSD
-from rdflib.plugins.sparql import prepareQuery
 from blessed import Terminal
-
 term = Terminal()
 
-print('  [' + term.green + term.bold + 'OK' + term.normal + '] Libraries imported.')
+print('  [ ' + term.green + term.bold + 'OK' + term.normal + ' ] Libraries imported.')
 
 print(term.home + term.clear)
 print(term.crimson(r'''
@@ -28,7 +20,13 @@ print(term.crimson(r'''
 '''))
 
 print('  [INFO] Importing libraries...')
-
+from tqdm import tqdm
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.spatial import Voronoi
+from rdflib import Graph, Namespace
+from rdflib.namespace import XSD
+from rdflib.plugins.sparql import prepareQuery
 print('  [' + term.green + term.bold + 'OK' + term.normal + '] Libraries imported.')
 
 
@@ -206,7 +204,7 @@ def main():
     g.parse('data/ontology.owl', format='ttl')
     g.parse('data/output-diciembre-utf8.ttl', format='ttl')
 
-    print('  [' + term.green + term.bold + 'OK' + term.normal + '] Data imported.')
+    print('  [ ' + term.green + term.bold + 'OK' + term.normal + ' ] Data imported.')
 
     # INIT VALUES
     dic = {58: [313, 137], 60: [621, 217], 57: [725, 245], 27: [1021, 333], 55: [1017, 403], 59: [887, 411],
