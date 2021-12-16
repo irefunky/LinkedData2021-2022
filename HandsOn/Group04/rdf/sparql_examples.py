@@ -13,19 +13,19 @@ def main():
     g.parse('../ontology/ontology.owl', format='ttl')
     g.parse('output-diciembre-utf8.ttl', format='ttl')
 
-    # # Query 1
-    # query = """
-    #         SELECT ?control_station
-    #         WHERE{
-    #             ?control_station a aqp_classes:Suburban .
-    #         }
-    #         LIMIT 10
-    #         """
-    # q = prepareQuery(query, initNs={"aqp_data": AQP_DATA, "aqp_classes": AQP_CLASSES, "aqp_properties": AQP_PROPERTIES})
-    # result = g.query(q)
-    # print("Query 1:")
-    # for row in result:
-    #     print(row)
+    # Query 1
+    query = """
+            SELECT ?control_station
+            WHERE{
+                ?control_station a aqp_classes:Suburban .
+            }
+            LIMIT 10
+            """
+    q = prepareQuery(query, initNs={"aqp_data": AQP_DATA, "aqp_classes": AQP_CLASSES, "aqp_properties": AQP_PROPERTIES})
+    result = g.query(q)
+    print("Query 1:")
+    for row in result:
+        print(row)
 
     # Query 2
     query = """
