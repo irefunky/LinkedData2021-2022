@@ -1,8 +1,5 @@
 from blessed import Terminal
 term = Terminal()
-
-print('  [ ' + term.green + term.bold + 'OK' + term.normal + ' ] Libraries imported.')
-
 print(term.home + term.clear)
 print(term.crimson(r'''
 
@@ -19,7 +16,8 @@ print(term.crimson(r'''
   Wait until the program initializes, please.
 '''))
 
-print('  [INFO] Importing libraries...')
+print('  [ ' +term.red + term.bold + 'INFO'+term.normal+ ' ] Importing libraries...')
+
 from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
@@ -27,7 +25,8 @@ from scipy.spatial import Voronoi
 from rdflib import Graph, Namespace
 from rdflib.namespace import XSD
 from rdflib.plugins.sparql import prepareQuery
-print('  [' + term.green + term.bold + 'OK' + term.normal + '] Libraries imported.')
+print('  [  ' +term.green + term.bold + 'OK'+term.normal+ '  ] Libraries imported.')
+
 
 
 # FUNCTIONS SECTION
@@ -198,13 +197,13 @@ def get_no2_pm10_o3(control_station, date, g):
 
 def main():
     # Import ontology
-    print('  [INFO] Importing data...')
+    print('  [ ' +term.red + term.bold + 'INFO'+term.normal+ ' ] Importing data...')
 
     g = Graph()
     g.parse('data/ontology.owl', format='ttl')
     g.parse('data/output-diciembre-utf8.ttl', format='ttl')
 
-    print('  [ ' + term.green + term.bold + 'OK' + term.normal + ' ] Data imported.')
+    print('  [  ' +term.green + term.bold + 'OK'+term.normal+ '  ] Data imported.')
 
     # INIT VALUES
     dic = {58: [313, 137], 60: [621, 217], 57: [725, 245], 27: [1021, 333], 55: [1017, 403], 59: [887, 411],
@@ -219,9 +218,9 @@ def main():
     run = True
     while run:
         # Initialize values
-        target_day = input('  Please, now select the day of december you want to now about> ')
+        target_date = input('  [ ' +term.red + term.bold + 'INFO'+term.normal+ ' ]  Please, now select the day of december you want to now about> ')
 
-        print('  Generating image...')
+        print('  [ ' +term.red + term.bold + 'INFO'+term.normal+ ' ]  Generating image...')
         # PLOTTING SETTINGS
         regions, vertices = voronoi_finite_polygons_2d(vor)
         fig, ax = plt.subplots()
@@ -247,7 +246,7 @@ def main():
         plt.axis('off')
         plt.show()
 
-        print('  Predict done!')
+        print('  [  ' +term.green + term.bold + 'OK'+term.normal+ '  ]  Predict done!')
         if input('  Do you want another predict?(y/n) ') == 'n':
             run = False
 
