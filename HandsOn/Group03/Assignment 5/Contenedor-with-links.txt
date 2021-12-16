@@ -1,0 +1,375 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA Y",
+    "description": "Remove column COORDENADA Y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA X",
+    "description": "Remove column COORDENADA X"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Código Interno del Situad",
+    "description": "Remove column Código Interno del Situad"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Barrio",
+    "description": "Remove column Barrio"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Modelo",
+    "description": "Remove column Modelo"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LONGITUD using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tipo Vía",
+    "expression": "join ([coalesce(cells['Tipo Vía'].value,''),coalesce(cells['Nombre'].value,'')],' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Tipo Vía using expression join ([coalesce(cells['Tipo Vía'].value,''),coalesce(cells['Nombre'].value,'')],' ')"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Nombre",
+    "description": "Remove column Nombre"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Tipo Vía",
+    "newColumnName": "Nombre",
+    "description": "Rename column Tipo Vía to Nombre"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LATITUD using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cantidad",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cantidad using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Lote",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Lote using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Número",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Tipo Contenedor",
+    "newColumnName": "TIPO CONTENEDOR",
+    "description": "Rename column Tipo Contenedor to TIPO CONTENEDOR"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Descripcion Modelo",
+    "newColumnName": "DESCRIPCION MODELO",
+    "description": "Rename column Descripcion Modelo to DESCRIPCION MODELO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Cantidad",
+    "newColumnName": "CANTIDAD",
+    "description": "Rename column Cantidad to CANTIDAD"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Lote",
+    "newColumnName": "LOTE",
+    "description": "Rename column Lote to LOTE"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Distrito",
+    "newColumnName": "DISTRITO",
+    "description": "Rename column Distrito to DISTRITO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Nombre",
+    "newColumnName": "NOMBRE",
+    "description": "Rename column Nombre to NOMBRE"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Número",
+    "newColumnName": "NUMERO",
+    "description": "Rename column Número to NUMERO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DIRECCIÓN",
+    "newColumnName": "DIRECCIÓN COMPLETA",
+    "description": "Rename column DIRECCIÓN to DIRECCIÓN COMPLETA"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DISTRITO using expression value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DISTRITO using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO CONTENEDOR",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIPO CONTENEDOR using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOMBRE using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCIÓN COMPLETA",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DIRECCIÓN COMPLETA using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "NUMERO",
+          "expression": "value",
+          "columnName": "NUMERO",
+          "from": -100,
+          "to": 5300,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NUMERO",
+    "expression": "jython:return ('s/n')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NUMERO using expression jython:return ('s/n')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "CANTIDAD",
+          "expression": "value",
+          "columnName": "CANTIDAD",
+          "from": 1,
+          "to": 2,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "CANTIDAD",
+    "expression": "jython:return 0",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CANTIDAD using expression jython:return 0"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOTE",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LOTE using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "LONGITUD",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "IDENTIFICADOR",
+    "columnInsertIndex": 8,
+    "description": "Create column IDENTIFICADOR at index 8 based on column LONGITUD using expression grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "IDENTIFICADOR",
+    "expression": "join ([coalesce(cells['IDENTIFICADOR'].value,''),coalesce(cells['LATITUD'].value,'')],'')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column IDENTIFICADOR using expression join ([coalesce(cells['IDENTIFICADOR'].value,''),coalesce(cells['LATITUD'].value,'')],'')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "IDENTIFICADOR",
+    "expression": "join ([coalesce(cells['IDENTIFICADOR'].value,''),coalesce(cells['TIPO CONTENEDOR'].value,'')],'')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column IDENTIFICADOR using expression join ([coalesce(cells['IDENTIFICADOR'].value,''),coalesce(cells['TIPO CONTENEDOR'].value,'')],'')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "IDENTIFICADOR",
+    "index": 0,
+    "description": "Move column IDENTIFICADOR to position 0"
+  }
+
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q3032114",
+        "name": "district of Madrid"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column DISTRITO to type Q3032114"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DISTRITO",
+    "expression": "grel:\"http://www.wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "URI distrito",
+    "columnInsertIndex": 6,
+    "description": "Create column URI distrito at index 6 based on column DISTRITO using expression grel:\"http://www.wikidata.org/entity/\"+cell.recon.match.id"
+  }
+]

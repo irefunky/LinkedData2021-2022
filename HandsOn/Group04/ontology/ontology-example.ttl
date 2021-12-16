@@ -1,19 +1,16 @@
-@prefix: <http://www.semanticweb.org/alvaro/ontologies/2021/10/untitled-ontology-4#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix	xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix	: 		<http://www.airqualitypredictor.org/ontology#>.
+@prefix rdf: 	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix	xsd:	<http://www.w3.org/2001/XMLSchema#>.
 
-:Madrid a :City.
+:ExampleMeasurement a 				:Measurement.
 
-:ExampleMeasurement a :Measurement .
+:28079004_1_38 		a 				:ControlStation;
+					:hasMeasurement :ExampleMeasurement;
+					:atStreet		"Plaza de España"^^xsd:string.
 
-:28079004_1_38 		a :ControlStation ;
-					:hasMeasurement :ExampleMeasurement ;
-					:isIn :Madrid .
-
-:ExampleMeasurement :hasMagnitude "SO_2(µg/m^3)" ;
-					:atYear 2019 ;
-					:atMonth 1 ;
-					:atDay 1 ;
-					:atHour 1 ;
-					:atDate "2019-01-01T01:00:00"^^xsd:dateTime ;
-					:hasValue "23.0"^^xsd:float .
+:ExampleMeasurement :hasMagnitude 	"SO_2(µg/m^3)";
+					:atYear			2019;
+					:atMonth		1;
+					:atDay			1;
+					:atDate			"2019-01-01T01:00:00"^^xsd:dateTime;
+					:hasValue		"23.0"^^xsd:float.

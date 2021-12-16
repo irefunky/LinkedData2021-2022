@@ -9,7 +9,7 @@ Original file is located at
 **Task 07: Querying RDF(s)**
 """
 
-!pip install rdflib 
+#!pip install rdflib 
 github_storage = "https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2020-2021/master/Assignment4"
 
 """Leemos el fichero RDF de la forma que lo hemos venido haciendo"""
@@ -122,6 +122,9 @@ q1 = prepareQuery('''
   initNs = {"ns": ns, "RDF": RDF, "RDFS": RDFS}
 )
 
+for s in g.query(q1):
+  print('SPARQLX: ',s)
+
 q2 = prepareQuery('''
   SELECT DISTINCT
     ?sujeto ?properties
@@ -133,6 +136,10 @@ q2 = prepareQuery('''
   ''',
   initNs = {"ns": ns, "RDF": RDF, "RDFS": RDFS}
 )
+
+for s in g.query(q2):
+  print('SPARQLY: ',s)
+
 grafo_dict_SPARQL = dict()
 for s in g.query(q1):
   grafo_dict_SPARQL[s[0]] = ['clase:', s[1]]

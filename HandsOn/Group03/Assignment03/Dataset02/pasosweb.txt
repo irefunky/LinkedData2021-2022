@@ -1,0 +1,535 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cantidad",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cantidad using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Lote",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Lote using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Número",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA X",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA X using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA X",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA X using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tipo Vía",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Camino",
+          "CAMINO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CAMINO"
+      },
+      {
+        "from": [
+          "GLORIETA",
+          "Glorieta"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GLORIETA"
+      },
+      {
+        "from": [
+          "COLONIA",
+          "Colonia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLONIA"
+      },
+      {
+        "from": [
+          "BULEVAR",
+          "Bulevar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BULEVAR"
+      },
+      {
+        "from": [
+          "Pasaje",
+          "PASAJE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PASAJE"
+      },
+      {
+        "from": [
+          "AVENIDA",
+          "Avenida"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA"
+      },
+      {
+        "from": [
+          "CARRETERA",
+          "Carretera"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CARRETERA"
+      },
+      {
+        "from": [
+          "TRAVESIA",
+          "Travesía"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TRAVESIA"
+      },
+      {
+        "from": [
+          "Callejón",
+          "CALLEJON"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CALLEJON"
+      }
+    ],
+    "description": "Mass edit cells in column Tipo Vía"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tipo Vía",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CALLE",
+          "Calle "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CALLE"
+      },
+      {
+        "from": [
+          "PASEO",
+          "Paseo "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PASEO"
+      },
+      {
+        "from": [
+          "PLAZA",
+          "Plaza "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PLAZA"
+      },
+      {
+        "from": [
+          "RONDA",
+          "Ronda "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RONDA"
+      }
+    ],
+    "description": "Mass edit cells in column Tipo Vía"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tipo Vía",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Parque"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PARQUE"
+      }
+    ],
+    "description": "Mass edit cells in column Tipo Vía"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tipo Vía",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Vía"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VIA"
+      }
+    ],
+    "description": "Mass edit cells in column Tipo Vía"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LATITUD using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LONGITUD using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA Y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA Y using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Barrio",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Barrio using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA X",
+    "expression": "jython:return value[:-3]+('.')+value[-2:]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA X using expression jython:return value[:-3]+('.')+value[-2:]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA X",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA X using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "COORDENADA X",
+          "expression": "value",
+          "columnName": "COORDENADA X",
+          "from": 431000,
+          "to": 455000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA X",
+    "expression": "jython:return value[:-3]+('.')+value[-1]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA X using expression jython:return value[:-3]+('.')+value[-1]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "COORDENADA X",
+          "expression": "value",
+          "columnName": "COORDENADA X",
+          "from": 431000,
+          "to": 455000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA X",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA X using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "COORDENADA Y",
+          "expression": "value",
+          "columnName": "COORDENADA Y",
+          "from": 4465000,
+          "to": 4490000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA Y",
+    "expression": "jython:return value[:-3]+('.')+value[-2:]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA Y using expression jython:return value[:-3]+('.')+value[-2:]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "COORDENADA Y",
+          "expression": "value",
+          "columnName": "COORDENADA Y",
+          "from": 4465000,
+          "to": 4490000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA Y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA Y using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "COORDENADA Y",
+          "expression": "value",
+          "columnName": "COORDENADA Y",
+          "from": 4465000,
+          "to": 4490000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA Y",
+    "expression": "jython:return value[:-3]+('.')+value[-1]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA Y using expression jython:return value[:-3]+('.')+value[-1]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "COORDENADA Y",
+          "expression": "value",
+          "columnName": "COORDENADA Y",
+          "from": 4465000,
+          "to": 4490000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "COORDENADA Y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COORDENADA Y using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Barrio",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Barrio using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Código Interno del Situad",
+    "description": "Remove column Código Interno del Situad"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Modelo",
+    "description": "Remove column Modelo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Descripcion Modelo",
+    "description": "Remove column Descripcion Modelo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Cantidad",
+    "description": "Remove column Cantidad"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Lote",
+    "description": "Remove column Lote"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Barrio",
+    "description": "Remove column Barrio"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA X",
+    "description": "Remove column COORDENADA X"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA Y",
+    "description": "Remove column COORDENADA Y"
+  }
+]

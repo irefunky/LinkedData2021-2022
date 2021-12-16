@@ -24,27 +24,26 @@ def merge_csv_datasets(folder: str = "",
     if suffixes is None and prefixes:
         suffixes = [""] * len(prefixes)
 
-    df = pd.DataFrame()
-
-    for p, s in zip(prefixes, suffixes):
-        temp_df = pd.read_csv(folder + "/" + p + root + s + ".csv", **kwargs)
-        df = pd.concat([df, temp_df])
-
-    return df
+    return pd.concat([pd.read_csv(folder + "/" + p + root + s + ".csv", **kwargs) for p, s in zip(prefixes, suffixes)])
 
 
-if __name__ == "__main__":
+def main(testing=False):
 
     suffixes1 = [month for month in ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep"] for _ in range(3)]
     prefixes1 = [year for _ in range(9) for year in ["19", "20", "21"]]
 
-    suffixes2 = [month for month in ["oct", "sep", "dic"] for _ in range(2)]
+    suffixes2 = [month for month in ["oct", "nov", "dic"] for _ in range(2)]
     prefixes2 = [year for _ in range(3) for year in ["19", "20"]]
 
     suf = suffixes1 + suffixes2
     prefs = prefixes1 + prefixes2
 
-    air_quality_df = merge_csv_datasets("air quality", suf, "_meteo", prefs, delimiter=";")
-    air_quality_df.to_csv("air_quality_merged.csv", index=False)
-    meteorological_data = merge_csv_datasets("meteorological data", suf, "_meteo", prefs, delimiter=";")
-    meteorological_data.to_csv("meteorological_data_merged.csv", index=False)
+    if not testing:
+        air_quality_df = merge_csv_datasets("air quality data", suf, "_mo", prefs, delimiter=";")
+        air_quality_df.to_csv("air_quality_merged.csv", index=False)
+        meteorological_data = merge_csv_datasets("meteorological data", suf, "_meteo", prefs, delimiter=";")
+        meteorological_data.to_csv("meteorological_data_merged.csv", index=False)
+
+
+if __name__ == "__main__":
+    main()
