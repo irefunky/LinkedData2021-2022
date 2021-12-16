@@ -1,4 +1,4 @@
-from rdflib import Graph, URIRef, Literal, Namespace
+from rdflib import Graph, Namespace
 from rdflib.namespace import XSD
 from rdflib.plugins.sparql import prepareQuery
 from typing import Tuple
