@@ -250,7 +250,7 @@ while run:
   fig, ax = plt.subplots()
   fig.canvas.set_window_title('Air quality predictor')
   ax.set_title(f'Contamination forecast on day {target_date}, december of 2021')
-  img = plt.imread('a.png')
+  img = plt.imread('control_stations_locations.png')
   ax.imshow(img)
 
 
