@@ -1,6 +1,17 @@
 # Air Quality Predictor
-Air Quality Predictor is an application that predicts the air quality of the city of Madrid.
+Air quality predictor is an application that predicts the air quality of the city of Madrid. 
+This application takes data given by the council of Madrid for predicting the pollution levels across different 
+districts of the city. This application takes n-triples / turtle encoded data obtained by cleaning and transforming the 
+data sources, to later predict the level of pollution on a given day. Then it categorizes the level of pollution by 
+using an air quality index known as CAQI. 
 
+![CAQI Index](images/caqi_index.PNG) 
+_Source:_ [Wikipedia](https://en.wikipedia.org/wiki/Air_quality_index#Europe).
+
+At the end, the application will return an image that describes the level of 
+pollution across the city by coloring a city map following the color code given by the air quality index mentioned 
+before.
+![example](images/example.png)
 
 ## Install dependencies
 
@@ -48,4 +59,4 @@ python3 air_quality_predictor.py
 
 The application will show you the predicted air quality of the city of Madrid at the selected day, in this case 
 December 17th:
-![](images/example.png)
+![example.png](images/example.png)
