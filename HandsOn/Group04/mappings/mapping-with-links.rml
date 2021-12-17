@@ -4,15 +4,17 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix our: <http://www.airqualitypredictor.org/ontology#>.
+@prefix ourdata: <http://www.airqualitypredictor.org/data/>.
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@base <http://example.com/ns#>.
 
 
-<our:TriplesMapMeasurement> a rr:TriplesMap;
+<#TriplesMapMeasurement> a rr:TriplesMap;
 	rml:logicalSource[
-		rml:source "air_quality-updated_short.csv";
+		rml:source "air_quality-updated.csv";
 		rml:referenceFormulation ql:CSV];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{Measurement}";
+		rr:template "http://www.airqualitypredictor.org/data/{Measurement}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type; 
@@ -51,53 +53,86 @@
 		rr:objectMap [ rml:reference "meanValue"; rr:datatype xsd:float]
 		];
 	rr:predicateObjectMap [
-		rr:predicate our:isFrom; 
-		rr:objectMap [rml:parentTriplesMap <our:TriplesMapControlStation>]
+			rr:predicate our:isFrom;
+			rr:objectMap [rr:template "http://www.airqualitypredictor.org/data/{ControlStation}"; rr:termType rr:IRI]
 		].
 
-<our:TriplesMapMeasurementSubClass1> a rr:TriplesMap;
+
+<#TriplesMapMeasurementSubClass1> a rr:TriplesMap;
 	rml:logicalSource [
-		rml:source "air_quality-updated_short.csv";
+		rml:source "air_quality-updated.csv";
 		rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{Measurement}";
+		rr:template "http://www.airqualitypredictor.org/data/{Measurement}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type; 
 		rr:objectMap [rr:template "http://www.airqualitypredictor.org/ontology/{magnitude}"; rr:termType rr:IRI]
 		];
 	rr:predicateObjectMap [
-		rr:predicate rdfs:type;
-		rr:objectMap [rr:template "http://www.airqualitypredictor.org/ontology/{magnitude}"]
-		];
-	rr:predicateObjectMap [
 		rr:predicate rdfs:subClassOf; 
 		rr:objectMap [rml:parentTriplesMap <our:TriplesMapMeasurement>]
 		].
 
-<our:TriplesMapMeasurementSubClass2> a rr:TriplesMap;
+<#TriplesMapMeasurementSubClass2> a rr:TriplesMap;
 	rml:logicalSource [
-		rml:source "meteorological_data-updated_short.csv";
+		rml:source "meteorological_data-updated.csv";
 		rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{Measurement}";
+		rr:template "http://www.airqualitypredictor.org/data/{Measurement}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
 		rr:objectMap [rr:template "http://www.airqualitypredictor.org/ontology/{magnitude}"; rr:termType rr:IRI]
 		];
 	rr:predicateObjectMap [
+		rr:predicate our:atDate; 
+		rr:objectMap [rml:reference "date"; rr:datatype xsd:dateTime]
+		];
+	rr:predicateObjectMap [
+		rr:predicate our:atDay; 
+		rr:objectMap [rml:reference "day"; rr:datatype xsd:int]
+		];
+	rr:predicateObjectMap [
+		rr:predicate our:atMonth;
+		rr:objectMap [rml:reference "month"; rr:datatype xsd:int]
+		];
+	rr:predicateObjectMap [
+		rr:predicate our:atYear;
+		rr:objectMap [rml:reference "year"; rr:datatype xsd:nonNegativeInteger]
+		];
+	rr:predicateObjectMap [
+		rr:predicate our:hasUnit; 
+		rr:objectMap [rml:reference "magnitude"; rr:datatype xsd:string]
+		];
+	rr:predicateObjectMap [ 
+		rr:predicate our:hasMaxValue;
+		rr:objectMap [ rml:reference "maxValue"; rr:datatype xsd:float]
+		];
+	rr:predicateObjectMap [ 
+		rr:predicate our:hasMinValue;
+		rr:objectMap [ rml:reference "minValue"; rr:datatype xsd:float]
+		];
+	rr:predicateObjectMap [ 
+		rr:predicate our:hasMeanValue;
+		rr:objectMap [ rml:reference "meanValue"; rr:datatype xsd:float]
+		];
+	rr:predicateObjectMap [
+    		rr:predicate our:isFrom;
+    		rr:objectMap [rr:template "http://www.airqualitypredictor.org/data/{ControlStation}"; rr:termType rr:IRI]
+		];
+	rr:predicateObjectMap [
 		rr:predicate rdfs:subClassOf; 
-		rr:objectMap [rml:parentTriplesMap <our:TriplesMapMeasurement>]
+		rr:objectMap [rml:parentTriplesMap <#TriplesMapMeasurement>]
 		].
 	
 
-<our:TriplesMapControlStation> a rr:TriplesMap;
+<#TriplesMapControlStation> a rr:TriplesMap;
 	rml:logicalSource [
 		rml:source "control-stations-info-updated-and-merged-with-links-and-ID.csv";
 		rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{CODIGO_CORTO}";
+		rr:template "http://www.airqualitypredictor.org/data/{CODIGO_CORTO}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdfs:label; 
@@ -109,20 +144,21 @@
 		];
 	rr:predicateObjectMap [
 		rr:predicate our:isIn;
-		rr:objectMap [rml:parentTriplesMap <our:TriplesMapCity>]
+		rr:objectMap [rml:parentTriplesMap <#TriplesMapCity>]
 		];
 	rr:predicateObjectMap [
 		rr:predicate our:hasMeasurement;
-		rr:objectMap [rml:parentTriplesMap <our:TriplesMapMeasurement>]
+		rr:objectMap [rml:parentTriplesMap <#TriplesMapMeasurement>;
+			]
 		].
 
 
-<our:TriplesMapControlStationSubClass1> a rr:TriplesMap;
+<#TriplesMapControlStationSubClass1> a rr:TriplesMap;
 	rml:logicalSource [
 		rml:source "control-stations-info-updated-and-merged-with-links-and-ID.csv";
 		rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{CODIGO_CORTO}";
+		rr:template "http://www.airqualitypredictor.org/data/{CODIGO_CORTO}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
@@ -130,16 +166,16 @@
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdfs:subClassOf;
-		rr:objectMap [rml:parentTriplesMap <our:TriplesMapControlStation>]
+		rr:objectMap [rml:parentTriplesMap <#TriplesMapControlStation>]
 		].
 
 
-<our:TriplesMapCity> a rr:TriplesMap;
+<#TriplesMapCity> a rr:TriplesMap;
 	rml:logicalSource [
 		rml:source "control-stations-info-updated-and-merged-with-links-and-ID.csv";
 		rml:referenceFormulation ql:CSV  ];
 	rr:subjectMap [
-		rr:template "http://www.airqualitypredictor.org/ontology/{LABEL}";
+		rr:template "http://www.airqualitypredictor.org/data/{LABEL}";
 		];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type; 
@@ -147,7 +183,7 @@
 		];
 	rr:predicateObjectMap [
 		rr:predicate our:hasControlStation;
-		rr:objectMap [rml:parentTriplesMap <our:TriplesMapControlStation>]
+		rr:objectMap [rml:parentTriplesMap <#TriplesMapControlStation>]
 		];
 	rr:predicateObjectMap [
 		rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ];

@@ -1,29 +1,25 @@
 PREFIX aqp: <http://www.airqualitypredictor.org/ontology#>
 
 
-SELECT ?temp ?fecha
+SELECT ?control_station
             WHERE{
-                ?temp a aqp:Temperature .
-                ?year a aqp:atYear .
-                ?fecha a aqp:atDate .
-                FILTER(?year = 2020) .
+                ?control_station a aqp_classes:Suburban .
             }
+            LIMIT 10
 
 
-SELECT ?temp ?fecha
+SELECT ?sub ?max_value ?day
             WHERE{
-                ?temp a aqp:Temperature .
-                ?year a aqp:atYear .
-                ?fecha a aqp:atDate .
-                FILTER(?year == 2020) .
+                ?sub a aqp_classes:PM10 .
+                ?sub aqp_properties:hasMaxValue ?max_value .
+                ?sub aqp_properties:atDay ?day .
+                FILTER(?day = 1)
             }
+            ORDER BY DESC(?max_value) LIMIT 10
 
 
-SELECT ?maxtemp ?fecha
+SELECT DISTINCT ?prop
             WHERE{
-                ?sub a aqp:Suburban .
-                ?temp a aqp:temperature .
-                ?fecha a aqp:atDate .
-                ?temp aqp:hasMaxValue ?maxtemp .
-                FILTER(?maxtemp > 15)
+                ?sub a aqp_classes:PM10 .
+                ?sub ?prop ?value .
             }
